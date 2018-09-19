@@ -2,6 +2,12 @@
 	//设置错误等级
 	error_reporting("E_ALL & ~E_NOTICE");
 
+	//定义秘钥
+	define("Token","test");
+
+	//检测加密签名
+	include "./checksing.php";
+
 	//业务逻辑异常
 	try{
 		if(empty($_POST["name"])){
