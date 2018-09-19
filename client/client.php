@@ -5,7 +5,11 @@
 	$url="http://localhost/api/server/server.php";
 
 	$curl = new Curl\Curl();
-	$curl->get($url);
+	$curl->post($url, array(
+		"name"=>"a",
+		"age"=>"1",
+		"sex"=>""
+	));
 
 	if ($curl->error) {
 	    echo $curl->error_code;
